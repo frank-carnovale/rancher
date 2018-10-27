@@ -10,3 +10,5 @@
   475  helm init --service-account tiller
   481  kubectl -n kube-system  rollout status deploy/tiller-deploy
   485  helm version
+  536  helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+  xxx  helm install stable/cert-manager --name cert-manager --namespace kube-system
