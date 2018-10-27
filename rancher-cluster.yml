@@ -1,0 +1,15 @@
+---
+
+ignore_docker_version: true
+
+nodes:
+  - address: v6.dbnet.com.au
+    user: frankc
+    role: [controlplane,worker,etcd]
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
+

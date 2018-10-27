@@ -1,0 +1,12 @@
+  453  rm -rf .kube .helm kube_config_rancher-cluster.yml 
+  452  vi rancher-cluster.yml 
+  454  rke up --config rancher-cluster.yml
+  458  mkdir .kube
+  457  cp kube_config_rancher-cluster.yml .kube/config
+  463  kubectl get nodes
+  465  kubectl get pods --all-namespaces
+  473  kubectl -n kube-system create serviceaccount tiller
+  474  kubectl create clusterrolebinding tiller   --clusterrole cluster-admin   --serviceaccount=kube-system:tiller
+  475  helm init --service-account tiller
+  481  kubectl -n kube-system  rollout status deploy/tiller-deploy
+  485  helm version
