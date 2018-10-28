@@ -34,4 +34,5 @@ kubectl get deployments --all-namespaces 2>/dev/null
 #kubectl get events --all-namespaces -o=custom-columns=LATEST:.lastTimestamp,COUNT:.count,TYPE:.type,MESSAGE:.message --sort-by=.lastTimestamp 2>/dev/null
 '
 
-watch -d -t "$report"
+# -d ?
+watch -t "$report"

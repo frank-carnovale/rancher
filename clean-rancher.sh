@@ -19,9 +19,9 @@ fi
 echo pruning images..
 docker image prune -f
 
-cleanupdirs="/var/lib/etcd /etc/kubernetes /etc/cni /opt/cni /var/lib/cni /var/run/calico /host/rancher"
+cleanupdirs="/var/lib/etcd /etc/kubernetes /etc/cni /opt/cni /var/lib/cni /var/run/calico"
 for dir in $cleanupdirs; do
-    if [ -f $dir ]; then
+    if [ -d $dir ]; then
         echo removing $dir..
         rm -rf $dir
     fi
