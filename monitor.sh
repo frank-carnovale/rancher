@@ -11,12 +11,27 @@ docker ps
 echo -e "
 _____
 NODES"
-kubectl get nodes
+kubectl get nodes 2>/dev/null
 
 echo -e "
 ____
 PODS"
-kubectl get pods --all-namespaces
+kubectl get pods --all-namespaces -o wide 2>/dev/null
+
+echo -e "
+________
+SERVICES"
+kubectl get services --all-namespaces 2>/dev/null
+
+echo -e "
+___________
+DEPLOYMENTS"
+kubectl get deployments --all-namespaces
+
+#echo -e "
+#______
+#EVENTS"
+#kubectl get events --all-namespaces -o=custom-columns=LATEST:.lastTimestamp,COUNT:.count,TYPE:.type,MESSAGE:.message --sort-by=.lastTimestamp 2>/dev/null
 '
 
-watch "$report"
+watch -d -t "$report"
