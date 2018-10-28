@@ -1,19 +1,18 @@
-
-
-  606  cd ~/rancher
-  592  (cd; rm -rf .kube .helm kube_config_rancher-cluster.yml; )
-  453  rm -rf .kube .helm kube_config_rancher-cluster.yml 
-  452  vi rancher-cluster.yml 
-  454  rke up --config rancher-cluster.yml
-  593  mkdir ~/.kube
-  594  cp kube_config_rancher-cluster.yml ~/.kube/config
-  463  kubectl get nodes
-  465  kubectl get pods --all-namespaces
-  473  kubectl -n kube-system create serviceaccount tiller
-  474  kubectl create clusterrolebinding tiller   --clusterrole cluster-admin   --serviceaccount=kube-system:tiller
-  475  helm init --service-account tiller
-  481  kubectl -n kube-system  rollout status deploy/tiller-deploy
-  485  helm version
-  536  helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
-  614  kubectl -n kube-system create serviceaccount tiller
-  610  helm install stable/cert-manager --name cert-manager --namespace kube-system
+:
+cd ~/rancher
+(cd; rm -rf .kube .helm kube_config_rancher-cluster.yml; )
+rm -rf .kube .helm kube_config_rancher-cluster.yml 
+vi rancher-cluster.yml 
+rke up --config rancher-cluster.yml
+mkdir ~/.kube
+cp kube_config_rancher-cluster.yml ~/.kube/config
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl -n kube-system create serviceaccount tiller
+kubectl create clusterrolebinding tiller   --clusterrole cluster-admin   --serviceaccount=kube-system:tiller
+helm init --service-account tiller
+kubectl -n kube-system  rollout status deploy/tiller-deploy
+helm version
+helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+kubectl -n kube-system create serviceaccount tiller
+helm install stable/cert-manager --name cert-manager --namespace kube-system
