@@ -34,7 +34,7 @@ if [ -n "$mounts" ]; then
 fi
 
 logs=$(ls /var/log/containers 2>/dev/null)
-if [ -n "$logs"]; then
+if [ -n "$logs" ]; then
     echo cleaning out all /var/log/containers..
     rm -rf $logs
 fi

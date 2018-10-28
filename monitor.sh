@@ -26,7 +26,7 @@ kubectl get services --all-namespaces 2>/dev/null
 echo -e "
 ___________
 DEPLOYMENTS"
-kubectl get deployments --all-namespaces
+kubectl get deployments --all-namespaces 2>/dev/null
 
 #echo -e "
 #______
