@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  jenkins:
+  - appVersion: lts
+    created: 2018-11-04T21:31:48.449047053Z
+    description: Frank's version of the Open source continuous integration server.
+      It supports multiple SCM tools including CVS, Subversion and Git. It can execute
+      Apache Ant and Apache Maven-based projects as well as arbitrary scripts.  Also
+      Frank was here.
+    digest: 51749c9c84af40f99e43f27c55b736c0c82bbae9ad3f1cacd96f46db7efde8f4
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: viglesias@google.com
+      name: viglesiasce
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-jnlp-slave
+    urls:
+    - github.com/frank-carnovale/rancher/mycharts/jenkins-0.21.0.tgz
+    version: 0.21.0
+generated: 2018-11-04T21:31:48.446909657Z
