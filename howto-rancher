@@ -3,7 +3,7 @@
 hostname=home.dbnet.com.au 
 
 cd ~/rancher
-sudo ./clean-rancher.sh
+#sudo ./clean-rancher.sh
 (cd; rm -rf .kube .helm; )
 rm -f kube_config_rancher-cluster.yml 
 # vi rancher-cluster.yml 
