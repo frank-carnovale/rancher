@@ -1,0 +1,7 @@
+docker run -d  --restart=unless-stopped \
+    -p 8080:80 \
+    -p 8445:443 \
+    -v /etc/ssl/certs/home.dbnet.com.au.crt:/etc/rancher/ssl/cert.pem \
+    -v /etc/ssl/certs/home.dbnet.com.au.key:/etc/rancher/ssl/key.pem \
+    rancher/rancher:latest --no-cacerts
+

@@ -4,9 +4,9 @@ report='
 date
 
 echo -e "
-#__________
-#CONTAINERS"
-#docker ps
+__________
+CONTAINERS"
+docker ps
 
 echo -e "
 _____
