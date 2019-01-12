@@ -1,6 +1,6 @@
 :
 
-hostname=home.dbnet.com.au 
+hostname=v6.dbnet.com.au
 
 cd ~/rancher
 #sudo ./clean-rancher.sh

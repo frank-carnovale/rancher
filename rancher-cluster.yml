@@ -3,7 +3,7 @@
 ignore_docker_version: true
 
 nodes:
-  - address: home.dbnet.com.au
+  - address: v6.dbnet.com.au
     user: frankc
     role: [controlplane,worker,etcd]
 
